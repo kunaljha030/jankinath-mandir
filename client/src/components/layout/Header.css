@@ -282,3 +282,16 @@
     font-size: 0.62rem;
   }
 }
+
+/* Safari (iPhone) doesn't stretch flex items inside a <button>: give the three lines a fixed width */
+.header__burger {
+  -webkit-appearance: none;
+  appearance: none;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--color-dark);
+}
+.header__burger span {
+  width: 26px;
+  flex-shrink: 0;
+}
