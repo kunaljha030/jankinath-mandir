@@ -12,8 +12,10 @@ const reelsDir =
 
 const VIDEO_EXT = /\.(mp4|webm|mov|m4v)$/i;
 
-// Newest first. Without the folder (on Vercel) the list comes from data/media.json (npm run media).
+// Newest first. On Vercel (file dates are the clone time) or without the folder, the list comes
+// from data/media.json (npm run media).
 async function readFolderFiles() {
+  if (process.env.VERCEL) return (await readData("media")).reels || [];
   let files;
   try {
     files = (await readdir(reelsDir)).filter((f) => VIDEO_EXT.test(f));

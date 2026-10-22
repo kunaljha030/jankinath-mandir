@@ -11,8 +11,10 @@ const galleryDir =
 
 const IMAGE_EXT = /\.(jpe?g|png|webp|gif|avif)$/i;
 
-// Newest first. Without the folder (on Vercel) the list comes from data/media.json (npm run media).
+// Newest first. On Vercel (file dates are the clone time) or without the folder, the list comes
+// from data/media.json (npm run media).
 async function readFolderFiles() {
+  if (process.env.VERCEL) return (await readData("media")).gallery || [];
   let files;
   try {
     files = (await readdir(galleryDir)).filter((f) => IMAGE_EXT.test(f));
