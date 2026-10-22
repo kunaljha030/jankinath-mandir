@@ -1,5 +1,5 @@
 .loader {
-  min-height: 100vh;
+  min-height: calc(100vh / var(--zoom));
   display: flex;
   flex-direction: column;
   align-items: center;

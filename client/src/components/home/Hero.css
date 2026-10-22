@@ -1,6 +1,6 @@
 /* Carousel sizes: the photos are 640px wide, so a 780px slide keeps them sharp */
 .hero {
-  --slide-h: min(520px, calc(100vh - var(--header-height) - 40px));
+  --slide-h: min(520px, calc(100vh / var(--zoom) - var(--header-height) - 40px));
   --slide-w: calc(var(--slide-h) * 1.5);
   --slide-gap: 18px;
   position: relative;

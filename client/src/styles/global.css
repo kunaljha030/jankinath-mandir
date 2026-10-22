@@ -5,6 +5,7 @@
 }
 
 html {
+  zoom: var(--zoom);
   font-size: var(--fs-base);
   scroll-behavior: smooth;
 }

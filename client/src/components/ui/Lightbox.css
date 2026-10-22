@@ -22,7 +22,7 @@
 /* Scale the photo to fill as much of the screen as possible, keeping its shape */
 .lightbox__figure img {
   width: 100%;
-  height: calc(100vh - 130px);
+  height: calc(100vh / var(--zoom) - 130px);
   object-fit: contain;
   animation: lightboxIn 0.35s ease;
 }
