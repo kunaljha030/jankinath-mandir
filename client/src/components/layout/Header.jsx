@@ -64,9 +64,12 @@ export default function Header() {
               aria-controls="offcanvas-menu"
               aria-label="Open menu"
             >
-              <span />
-              <span />
-              <span />
+              {/* drawn as an SVG with its own colour so every browser (iPhone Safari too) shows it */}
+              <svg width="26" height="18" viewBox="0 0 26 18" aria-hidden="true">
+                <rect y="0" width="26" height="2" rx="1" fill="currentColor" />
+                <rect y="8" width="26" height="2" rx="1" fill="currentColor" />
+                <rect y="16" width="26" height="2" rx="1" fill="currentColor" />
+              </svg>
             </button>
           </div>
         </div>

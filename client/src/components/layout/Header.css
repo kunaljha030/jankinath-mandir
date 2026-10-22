@@ -283,15 +283,19 @@
   }
 }
 
-/* Safari (iPhone) doesn't stretch flex items inside a <button>: give the three lines a fixed width */
+/* Burger icon is an SVG in the dark text colour (orange on hover) */
 .header__burger {
   -webkit-appearance: none;
   appearance: none;
   align-items: center;
   flex-shrink: 0;
-  color: var(--color-dark);
+  color: #282828;
+  -webkit-tap-highlight-color: transparent;
 }
-.header__burger span {
-  width: 26px;
+.header__burger svg {
+  display: block;
   flex-shrink: 0;
+}
+.header__burger:hover {
+  color: var(--color-accent);
 }
