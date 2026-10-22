@@ -1,0 +1,97 @@
+/* Tighter than the default section spacing */
+.section.significance {
+  padding: 60px 0 70px;
+}
+.significance .section-title {
+  margin-bottom: 36px;
+}
+
+/* Slider track: 3 cards visible, 2 on tablets, 1 on phones (arrows come from TeamSlider.css) */
+.significance__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * 30px) / 3);
+  gap: 30px;
+  padding: 8px 0 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.significance__track::-webkit-scrollbar {
+  display: none;
+}
+.significance .team__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.significance__card {
+  position: relative;
+  padding: 44px 36px 40px;
+  background: #fff;
+  border-top: 3px solid var(--color-accent);
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: box-shadow var(--transition);
+}
+.significance__card:hover {
+  box-shadow: 0 18px 40px rgba(40, 40, 40, 0.08);
+}
+
+.significance__number {
+  position: absolute;
+  top: 18px;
+  right: 26px;
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--color-bg-alt);
+  user-select: none;
+}
+
+.significance__icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  color: var(--color-accent);
+}
+
+.significance__card h3 {
+  position: relative;
+  margin-bottom: 6px;
+  font-family: var(--font-hindi);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.significance__hindi {
+  margin-bottom: 14px;
+  font-family: var(--font-hindi);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.significance__card p:last-child {
+  margin: 0;
+  line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+  .significance__track {
+    grid-auto-columns: calc((100% - 30px) / 2);
+  }
+}
+@media (max-width: 767px) {
+  .significance__track {
+    grid-auto-columns: 88%;
+  }
+  .significance__card {
+    padding: 38px 24px 32px;
+  }
+}

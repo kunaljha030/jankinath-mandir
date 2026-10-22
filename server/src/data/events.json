@@ -1,0 +1,360 @@
+{
+  "venue": {
+    "name": "Shri Janki Nath Bada Mandir",
+    "address": "Rewasa Dham, Sikar District, Rajasthan"
+  },
+  "events": [
+    {
+      "id": 1,
+      "slug": "shri-krishna-janmashtami",
+      "title": "Shri Krishna Janmashtami",
+      "start": "2026-09-04T20:00",
+      "end": "2026-09-05T00:30",
+      "cost": "Free",
+      "category": "Utsav",
+      "image": "/images/events/shri-krishna-janmashtami.svg",
+      "description": "Bhajan sandhya, jhanki darshan and midnight janmotsav aarti followed by panjiri and charnamrit prasad."
+    },
+    {
+      "id": 2,
+      "slug": "shardiya-navratri-navahn-parayan",
+      "title": "Shardiya Navratri – Navahn Parayan Path",
+      "start": "2026-10-11T08:00",
+      "end": "2026-10-19T12:00",
+      "cost": "Free",
+      "category": "Path",
+      "image": "/images/events/shardiya-navratri-navahn-parayan.svg",
+      "description": "Nine days of Shri Ramcharitmanas Navahn Parayan path every morning, with aarti and prasad. All devotees are welcome to join the path."
+    },
+    {
+      "id": 3,
+      "slug": "sundarkand-path",
+      "title": "Sundarkand Path",
+      "start": "2026-08-04T19:00",
+      "end": "2026-08-04T21:00",
+      "repeat": {
+        "every": "week",
+        "until": "2027-06-30"
+      },
+      "cost": "Free",
+      "category": "Path",
+      "image": "/images/events/sundarkand-path.svg",
+      "description": "Weekly Sundarkand path every Tuesday evening, followed by Hanuman Chalisa, aarti and prasad."
+    },
+    {
+      "id": 4,
+      "slug": "vijayadashami-shobha-yatra",
+      "title": "विजयादशमी – शोभा यात्रा",
+      "start": "2026-10-20T16:00",
+      "end": "2026-10-20T21:00",
+      "cost": "Free",
+      "category": "Utsav",
+      "image": "/images/events/vijayadashami-shobha-yatra.svg",
+      "description": "श्री राम दरबार की नगर में भव्य शोभा यात्रा, तत्पश्चात राम-रावण लीला एवं मंदिर में महाआरती।",
+      "aagami": true
+    },
+    {
+      "id": 5,
+      "slug": "sharad-purnima-kheer-prasad",
+      "title": "शरद पूर्णिमा – खीर प्रसाद",
+      "start": "2026-10-25T19:00",
+      "end": "2026-10-25T23:30",
+      "cost": "Free",
+      "category": "Utsav",
+      "image": "/images/events/sharad-purnima-kheer-prasad.svg",
+      "description": "ठाकुर जी का श्वेत वस्त्रों में विशेष श्रृंगार, पूर्ण चन्द्र की चाँदनी में भजन संध्या, तथा चाँदनी में रखी खीर का प्रसाद अर्द्धरात्रि के बाद वितरित किया जाएगा।",
+      "aagami": true
+    },
+    {
+      "id": 6,
+      "slug": "kartik-maas-deepdan",
+      "title": "Kartik Maas Deepdan",
+      "start": "2026-10-26T18:00",
+      "end": "2026-11-24T19:30",
+      "cost": "Free",
+      "category": "Seva",
+      "image": "/images/events/kartik-maas-deepdan.svg",
+      "description": "Every evening during Kartik maas, devotees offer diyas at the mandir. Diyas and ghee are available at the mandir counter."
+    },
+    {
+      "id": 7,
+      "slug": "deepawali-deepotsav",
+      "title": "Deepawali Deepotsav",
+      "start": "2026-11-08T18:00",
+      "end": "2026-11-08T22:00",
+      "cost": "Free",
+      "category": "Utsav",
+      "image": "/images/events/deepawali-deepotsav.svg",
+      "description": "The whole mandir is lit with thousands of diyas. Lakshmi pujan, special aarti and distribution of mithai prasad."
+    },
+    {
+      "id": 8,
+      "slug": "annakoot-mahotsav",
+      "title": "Annakoot Mahotsav",
+      "start": "2026-11-09T11:00",
+      "end": "2026-11-09T17:00",
+      "cost": "Free",
+      "category": "Bhandara",
+      "image": "/images/events/annakoot-mahotsav.svg",
+      "description": "Chhappan bhog is offered to Thakur Ji, followed by darshan of the annakoot and a bhandara for all devotees."
+    },
+    {
+      "id": 10,
+      "slug": "sita-ram-vivah-mahotsav",
+      "title": "Shri Sita-Ram Vivah Mahotsav",
+      "start": "2026-12-14T10:00",
+      "end": "2026-12-15T22:00",
+      "cost": "Free",
+      "category": "Utsav",
+      "image": "/images/events/sita-ram-vivah-mahotsav.svg",
+      "description": "Vivah Panchami celebration of the divine wedding of Shri Sita Ram ji: baraat, vivah utsav, bhajan and bhandara."
+    },
+    {
+      "id": 11,
+      "slug": "makar-sankranti-khichdi-bhandara",
+      "title": "Makar Sankranti – Khichdi Bhandara",
+      "start": "2027-01-14T11:00",
+      "end": "2027-01-14T16:00",
+      "cost": "Free",
+      "category": "Bhandara",
+      "image": "/images/events/makar-sankranti-khichdi-bhandara.svg",
+      "description": "Til-gud prasad, daan and khichdi bhandara for all devotees on the occasion of Makar Sankranti."
+    },
+    {
+      "id": 12,
+      "slug": "shri-ram-navami-janmotsav",
+      "title": "Shri Ram Navami Janmotsav",
+      "start": "2027-04-15T09:00",
+      "end": "2027-04-15T20:00",
+      "cost": "Free",
+      "category": "Utsav",
+      "image": "/images/events/shri-ram-navami-janmotsav.svg",
+      "description": "Janmotsav of Prabhu Shri Ram at noon, with Ramcharitmanas path, badhai bhajan, special shringar and bhandara."
+    },
+    {
+      "id": 13,
+      "slug": "satsang-jhansi-2026-10",
+      "title": "सत्संग",
+      "start": "2026-10-01T00:00",
+      "end": "2026-10-02T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Satsang",
+      "venue": {
+        "name": "झांसी",
+        "address": "झांसी, उत्तर प्रदेश"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से सत्संग — झांसी।"
+    },
+    {
+      "id": 14,
+      "slug": "valmiki-ramayan-katha-salasar-2026",
+      "title": "श्री वाल्मीकि रामायण कथा",
+      "start": "2026-10-04T00:00",
+      "end": "2026-10-10T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Katha",
+      "venue": {
+        "name": "सालासर",
+        "address": "सालासर, राजस्थान"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से श्री वाल्मीकि रामायण कथा — सालासर।"
+    },
+    {
+      "id": 15,
+      "slug": "bhagwat-katha-jadkhor-godham-2026",
+      "title": "श्रीमद् भागवत कथा",
+      "start": "2026-10-11T00:00",
+      "end": "2026-10-19T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Katha",
+      "venue": {
+        "name": "श्री जड़खोर गोधाम",
+        "address": "श्री जड़खोर गोधाम, राजस्थान"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से श्रीमद् भागवत कथा — श्री जड़खोर गोधाम।"
+    },
+    {
+      "id": 16,
+      "slug": "satsang-vrindavan-2026-10",
+      "title": "सत्संग",
+      "start": "2026-10-24T00:00",
+      "end": "2026-10-24T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Satsang",
+      "venue": {
+        "name": "वृन्दावन",
+        "address": "वृन्दावन, उत्तर प्रदेश"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से सत्संग — वृन्दावन।"
+    },
+    {
+      "id": 17,
+      "slug": "bhagwat-katha-govardhan-2026",
+      "title": "श्रीमद् भागवत कथा",
+      "start": "2026-10-29T00:00",
+      "end": "2026-11-05T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Katha",
+      "venue": {
+        "name": "सूरभाम गौशाला",
+        "address": "गोवर्धन, उत्तर प्रदेश"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से श्रीमद् भागवत कथा — सूरभाम गौशाला।"
+    },
+    {
+      "id": 18,
+      "slug": "bhagwat-katha-jodhpur-2026",
+      "title": "श्रीमद् भागवत कथा",
+      "start": "2026-11-12T00:00",
+      "end": "2026-11-18T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Katha",
+      "venue": {
+        "name": "केशव प्रिया गोशाला",
+        "address": "जोधपुर, राजस्थान"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से श्रीमद् भागवत कथा — केशव प्रिया गोशाला।"
+    },
+    {
+      "id": 19,
+      "slug": "pahadi-baba-mahotsav-2026",
+      "title": "प्रथम पहाड़ी बाबा महोत्सव",
+      "start": "2026-11-20T00:00",
+      "end": "2026-11-24T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Utsav",
+      "venue": {
+        "name": "श्री मलूकपीठ",
+        "address": "वृन्दावन, उत्तर प्रदेश"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से प्रथम पहाड़ी बाबा महोत्सव — श्री मलूकपीठ।"
+    },
+    {
+      "id": 20,
+      "slug": "bhagwat-katha-orchha-2026",
+      "title": "श्रीमद् भागवत कथा एवं प्राण प्रतिष्ठा समारोह",
+      "start": "2026-11-26T00:00",
+      "end": "2026-12-02T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Katha",
+      "venue": {
+        "name": "ओरछा",
+        "address": "ओरछा, मध्य प्रदेश"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से श्रीमद् भागवत कथा एवं प्राण प्रतिष्ठा समारोह — ओरछा।"
+    },
+    {
+      "id": 21,
+      "slug": "bhagwat-katha-indore-2026",
+      "title": "श्रीमद् भागवत कथा",
+      "start": "2026-12-05T00:00",
+      "end": "2026-12-11T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Katha",
+      "venue": {
+        "name": "पंचकुइया आश्रम",
+        "address": "इंदौर, मध्य प्रदेश"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से श्रीमद् भागवत कथा — पंचकुइया आश्रम।"
+    },
+    {
+      "id": 22,
+      "slug": "sitaram-vivah-mahotsav-buxar-2026",
+      "title": "श्री सीताराम विवाह महोत्सव",
+      "start": "2026-12-13T00:00",
+      "end": "2026-12-14T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Utsav",
+      "venue": {
+        "name": "बक्सर",
+        "address": "बक्सर, बिहार"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से श्री सीताराम विवाह महोत्सव — बक्सर।"
+    },
+    {
+      "id": 23,
+      "slug": "bhagwat-katha-chitrakoot-2026",
+      "title": "श्रीमद् भागवत कथा",
+      "start": "2026-12-17T00:00",
+      "end": "2026-12-23T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Katha",
+      "venue": {
+        "name": "चित्रकूट धाम",
+        "address": "चित्रकूट"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से श्रीमद् भागवत कथा — चित्रकूट धाम।"
+    },
+    {
+      "id": 24,
+      "slug": "satsang-delhi-2026-12",
+      "title": "सत्संग",
+      "start": "2026-12-25T00:00",
+      "end": "2026-12-25T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Satsang",
+      "venue": {
+        "name": "दिल्ली",
+        "address": "दिल्ली"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से सत्संग — दिल्ली।"
+    },
+    {
+      "id": 25,
+      "slug": "satsang-ahmedabad-2026-12",
+      "title": "सत्संग",
+      "start": "2026-12-28T00:00",
+      "end": "2026-12-28T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Satsang",
+      "venue": {
+        "name": "अहमदाबाद",
+        "address": "अहमदाबाद, गुजरात"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से सत्संग — अहमदाबाद।"
+    },
+    {
+      "id": 26,
+      "slug": "satsang-kolkata-2026-12",
+      "title": "सत्संग",
+      "start": "2026-12-29T00:00",
+      "end": "2026-12-29T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Satsang",
+      "venue": {
+        "name": "कोलकाता",
+        "address": "कोलकाता, पश्चिम बंगाल"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से सत्संग — कोलकाता।"
+    },
+    {
+      "id": 27,
+      "slug": "ras-mahotsav-jodhpur-2026",
+      "title": "रस महोत्सव",
+      "start": "2026-12-30T00:00",
+      "end": "2026-12-31T23:59",
+      "allDay": true,
+      "aagami": true,
+      "category": "Utsav",
+      "venue": {
+        "name": "जोधपुर",
+        "address": "जोधपुर, राजस्थान"
+      },
+      "description": "स्वामी श्रीराजेन्द्र दास देवाचार्य जी महाराज के श्रीमुख से रस महोत्सव — जोधपुर।"
+    }
+  ]
+}

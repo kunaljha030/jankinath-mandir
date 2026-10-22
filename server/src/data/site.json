@@ -1,0 +1,123 @@
+{
+  "name": "Shri Janki Nath",
+  "subName": "Bada Mandir",
+  "tagline": "श्री अग्रपीठ, रैवासा धाम",
+  "fullName": "Shri Janki Nath Bada Mandir",
+  "menu": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "About",
+      "path": "/about"
+    },
+    {
+      "label": "Programs",
+      "path": "/events",
+      "children": [
+        {
+          "label": "Events Calendar",
+          "path": "/events?view=month"
+        },
+        {
+          "label": "Events List",
+          "path": "/events"
+        }
+      ]
+    },
+    {
+      "label": "Donate",
+      "path": "/donate"
+    },
+    {
+      "label": "Teaching & Training",
+      "path": "/teaching"
+    },
+    {
+      "label": "Blog",
+      "path": "/blog"
+    },
+    {
+      "label": "Gallery",
+      "path": "/gallery",
+      "children": [
+        {
+          "label": "Photos",
+          "path": "/gallery"
+        },
+        {
+          "label": "Videos",
+          "path": "/videos"
+        }
+      ]
+    },
+    {
+      "label": "Visiting",
+      "path": "/visit"
+    }
+  ],
+  "socials": [
+    {
+      "name": "youtube",
+      "url": "https://www.youtube.com/@RajendraDasjiMaharaj"
+    },
+    {
+      "name": "instagram",
+      "url": "https://www.instagram.com/rajendradasjimaharaj/"
+    },
+    {
+      "name": "whatsapp",
+      "url": ""
+    }
+  ],
+  "connect": [
+    {
+      "name": "youtube",
+      "title": "YouTube",
+      "handle": "@RajendraDasjiMaharaj",
+      "text": "Katha, pravachan and live satsang videos",
+      "cta": "Subscribe",
+      "avatar": "/images/connect/youtube-avatar.jpg",
+      "url": "https://www.youtube.com/@RajendraDasjiMaharaj"
+    },
+    {
+      "name": "instagram",
+      "title": "Instagram",
+      "handle": "@rajendradasjimaharaj",
+      "text": "Darshan photos and daily updates",
+      "cta": "Follow",
+      "avatar": "/images/connect/instagram-avatar.jpg",
+      "url": "https://www.instagram.com/rajendradasjimaharaj/",
+      "post": "https://www.instagram.com/p/DdDRMncoIpi/"
+    },
+    {
+      "name": "whatsapp",
+      "title": "WhatsApp",
+      "handle": "Rewasa Dham",
+      "text": "Event and utsav updates on your phone",
+      "cta": "Join",
+      "avatar": "/images/logo-icon.png",
+      "url": ""
+    },
+    {
+      "name": "katha",
+      "title": "आगामी कथाएँ",
+      "handle": "Upcoming Kathas",
+      "cta": "View all",
+      "icon": "calendar",
+      "avatar": "/images/connect/youtube-avatar.jpg",
+      "url": "/events"
+    }
+  ],
+  "locations": [
+    {
+      "title": "Shri Janki Nath Bada Mandir",
+      "lines": [
+        "Rewasa Dham, Sikar District",
+        "Rajasthan, India"
+      ]
+    }
+  ],
+  "copyright": "Shri Janki Nath Bada Mandir © {year}. All Rights Reserved."
+}

@@ -1,0 +1,60 @@
+/* Carousel sizes: the photos are 640px wide, so a 780px slide keeps them sharp */
+.hero {
+  --slide-h: min(520px, calc(100vh - var(--header-height) - 40px));
+  --slide-w: calc(var(--slide-h) * 1.5);
+  --slide-gap: 18px;
+  position: relative;
+  margin-top: var(--header-height);
+  padding: 20px 0;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+/* All photos in one row; the row starts at the centre line and moves one photo at a time */
+.hero__track {
+  position: relative;
+  left: 50%;
+  display: flex;
+  gap: var(--slide-gap);
+  width: max-content;
+}
+
+.hero__slide {
+  flex: 0 0 var(--slide-w);
+  height: var(--slide-h);
+  overflow: hidden;
+  border-radius: 6px;
+  opacity: 0.55;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.hero__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 18px 40px rgba(40, 40, 40, 0.25);
+}
+
+.hero__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  user-select: none;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    --slide-w: 86vw;
+    --slide-h: calc(86vw / 1.5);
+    --slide-gap: 10px;
+    padding: 12px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__track,
+  .hero__slide {
+    transition: none !important;
+  }
+}

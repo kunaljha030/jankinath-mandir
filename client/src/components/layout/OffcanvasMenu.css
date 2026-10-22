@@ -1,0 +1,204 @@
+.offcanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  visibility: hidden;
+  transition: visibility 0.4s;
+}
+.offcanvas--open {
+  visibility: visible;
+}
+
+/* Light dim over the page behind the panel */
+.offcanvas__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 40, 40, 0.35);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.offcanvas--open .offcanvas__backdrop {
+  opacity: 1;
+}
+
+.offcanvas__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: min(380px, 100%);
+  background: #fff;
+  box-shadow: -10px 0 40px rgba(40, 40, 40, 0.15);
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.offcanvas--open .offcanvas__panel {
+  transform: none;
+}
+
+/* Header row: logo + close button */
+.offcanvas__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: var(--header-height);
+  padding: 0 20px 0 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.offcanvas__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.offcanvas__logo > span {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+.offcanvas__logo small {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.offcanvas__close {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+}
+.offcanvas__close:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Menu list */
+.offcanvas__nav {
+  flex: 1;
+  padding: 10px 0;
+}
+.offcanvas__nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.offcanvas__nav > ul > li {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.offcanvas__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offcanvas__item a {
+  flex: 1;
+  padding: 15px 24px;
+  font-size: 1rem;
+  color: var(--color-dark);
+}
+.offcanvas__item a:hover,
+.offcanvas__item a.active {
+  color: var(--color-accent);
+}
+.offcanvas__item a.active {
+  font-weight: 500;
+}
+
+/* +/- toggle for submenus */
+.offcanvas__toggle {
+  position: relative;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.offcanvas__toggle::before,
+.offcanvas__toggle span {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  margin: -1px 0 0 -6px;
+  background: var(--color-dark);
+  transition: transform var(--transition), background-color var(--transition);
+}
+.offcanvas__toggle span {
+  transform: rotate(90deg);
+}
+.is-expanded .offcanvas__toggle::before {
+  background: var(--color-accent);
+}
+.is-expanded .offcanvas__toggle span {
+  transform: rotate(0deg);
+  background: var(--color-accent);
+}
+
+.offcanvas__submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+  transition: max-height 0.35s ease;
+}
+.is-expanded .offcanvas__submenu {
+  max-height: 400px;
+}
+.offcanvas__submenu a {
+  display: block;
+  padding: 10px 24px 10px 40px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+.offcanvas__submenu li:first-child a {
+  padding-top: 14px;
+}
+.offcanvas__submenu li:last-child a {
+  padding-bottom: 14px;
+}
+.offcanvas__submenu a:hover,
+.offcanvas__submenu a.active {
+  color: var(--color-accent);
+}
+
+/* Bottom: tagline + socials */
+.offcanvas__bottom {
+  padding: 24px;
+}
+.offcanvas__tagline {
+  margin-bottom: 16px;
+  font-family: var(--font-hindi);
+  font-weight: 500;
+  color: var(--color-accent);
+}
+.offcanvas__bottom .socials a {
+  background: var(--color-bg-alt);
+  color: var(--color-dark);
+}
+.offcanvas__bottom .socials a:hover {
+  background: var(--color-accent);
+  color: #fff;
+}

@@ -1,0 +1,55 @@
+.socials {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socials a,
+.socials__soon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-dark-2);
+  color: #fff;
+  transition: background-color var(--transition), color var(--transition);
+}
+.socials a:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.socials__soon {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Brand colours */
+.socials__item--youtube a,
+.socials__item--youtube .socials__soon {
+  background: #ff0000;
+}
+.socials__item--instagram a,
+.socials__item--instagram .socials__soon {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+.socials__item--whatsapp a,
+.socials__item--whatsapp .socials__soon {
+  background: #25d366;
+}
+.socials__item--facebook a {
+  background: #1877f2;
+}
+.socials__item--x a {
+  background: #000;
+}
+.socials__item a:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+.socials a {
+  transition: filter var(--transition), transform var(--transition);
+}

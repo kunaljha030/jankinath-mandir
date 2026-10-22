@@ -1,0 +1,123 @@
+.footer {
+  background: var(--color-dark);
+  color: var(--color-muted);
+}
+
+/* Logo + address | page links | social links */
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+/* .container would otherwise reset the vertical padding */
+.container.footer__grid {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: #fff;
+}
+.footer__logo:hover {
+  color: #fff;
+}
+.footer__logo img {
+  margin-bottom: 4px;
+}
+.footer__tagline {
+  font-family: var(--font-hindi);
+  font-size: 0.85rem;
+  color: var(--color-accent-2);
+}
+
+.footer__location {
+  display: flex;
+  gap: 10px;
+}
+.footer__location p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.footer__pin {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--color-accent);
+}
+
+
+/* Page links: equal 3 × 3 grid */
+.footer__nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  gap: 14px 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer__nav a {
+  font-size: 1rem;
+  color: var(--color-muted);
+  transition: color var(--transition);
+}
+.footer__nav a:hover {
+  color: var(--color-accent-2);
+}
+
+.footer__social .socials {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--color-dark-3);
+}
+.footer__copy {
+  margin: 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .footer__logo {
+    align-items: center;
+  }
+  .footer__location {
+    justify-content: center;
+  }
+  .footer__social .socials {
+    justify-content: center;
+  }
+}
+@media (max-width: 560px) {
+  .footer__grid {
+    gap: 28px;
+  }
+  .container.footer__grid {
+    padding-top: 40px;
+    padding-bottom: 36px;
+  }
+  .footer__nav ul {
+    gap: 12px 24px;
+  }
+}

@@ -1,0 +1,64 @@
+/* Design tokens taken from the Samadhi theme (__colors-default.css / __custom.css) */
+:root {
+  /* Colors */
+  --color-accent: #f16f23;
+  --color-accent-hover: #ff8533;
+  --color-accent-2: #ffac4b;
+  --color-accent-pale: #ffd9ac;
+  --color-gold: #ddb837;
+
+  --color-dark: #282828;
+  --color-dark-2: #303030;
+  --color-dark-3: #3d3d3d;
+  --color-text: #7e7e7e;
+  --color-muted: #a8a8a8;
+  --color-light: #b5b4b1;
+
+  --color-bg: #ffffff;
+  --color-bg-alt: #f2f1ef;
+  --color-border: #e7e4df;
+
+  /* Typography. The theme uses Reforma (headings) + Renner (body), both
+     commercial. Marcellus + Jost are free Google Fonts look-alikes; if you
+     license the originals, add @font-face rules and change these two lines. */
+  --font-heading: "Marcellus", Georgia, serif;
+  --font-body: "Jost", "Segoe UI", sans-serif;
+  --font-hindi: "Noto Sans Devanagari", "Nirmala UI", sans-serif;
+
+  --fs-base: 18px;
+  --fs-h1: 3.556rem;
+  --fs-h2: 2.889rem;
+  --fs-h3: 2.222rem;
+  --fs-h4: 1.667rem;
+  --fs-h5: 1.333rem;
+  --fs-display: 4.444rem;
+  --fs-small: 0.778rem;
+
+  /* Layout */
+  --container: 1290px;
+  --gutter: 30px;
+  --section-space: 120px;
+  --header-height: 96px;
+
+  --transition: 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --fs-base: 17px;
+    --section-space: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --fs-base: 16px;
+    --section-space: 70px;
+    --gutter: 20px;
+    --fs-h1: 2.4rem;
+    --fs-h2: 2.1rem;
+    --fs-h3: 1.7rem;
+    --fs-display: 2.8rem;
+    --header-height: 76px;
+  }
+}

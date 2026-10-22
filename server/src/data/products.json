@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "slug": "the-way-of-happiness",
+    "title": "The Way of Happiness",
+    "price": 15,
+    "rating": 5,
+    "tags": ["buddhism", "happiness", "meditation", "soul"],
+    "image": ""
+  },
+  {
+    "id": 2,
+    "slug": "four-truths-of-love",
+    "title": "Four Truths of Love",
+    "price": 11,
+    "rating": 0,
+    "tags": ["happiness", "meditation", "soul"],
+    "image": ""
+  },
+  {
+    "id": 3,
+    "slug": "meditations-from-the-mat",
+    "title": "Meditations on the Mat",
+    "price": 10,
+    "rating": 0,
+    "tags": ["buddhism", "happiness", "meditation"],
+    "image": ""
+  },
+  {
+    "id": 4,
+    "slug": "the-book-of-stillness",
+    "title": "The Book of Stillness",
+    "price": 14,
+    "rating": 0,
+    "tags": ["buddhism", "religion"],
+    "image": ""
+  }
+]

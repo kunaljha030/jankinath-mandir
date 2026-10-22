@@ -1,0 +1,90 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 90px 30px;
+  background: rgba(20, 20, 20, 0.94);
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox__figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Scale the photo to fill as much of the screen as possible, keeping its shape */
+.lightbox__figure img {
+  width: 100%;
+  height: calc(100vh - 130px);
+  object-fit: contain;
+  animation: lightboxIn 0.35s ease;
+}
+.lightbox__figure figcaption {
+  margin-top: 14px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.lightbox__figure figcaption span {
+  margin-left: 12px;
+  color: var(--color-muted);
+}
+
+.lightbox__close,
+.lightbox__nav {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color var(--transition), background-color var(--transition);
+}
+.lightbox__close {
+  top: 20px;
+  right: 24px;
+}
+.lightbox__close:hover {
+  color: var(--color-accent-2);
+}
+
+.lightbox__nav {
+  top: 50%;
+  width: 54px;
+  height: 54px;
+  margin-top: -27px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.lightbox__nav:hover {
+  background: var(--color-accent);
+}
+.lightbox__nav--prev {
+  left: 24px;
+}
+.lightbox__nav--next {
+  right: 24px;
+}
+
+@keyframes lightboxIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 600px) {
+  .lightbox {
+    padding: 60px 12px;
+  }
+  .lightbox__nav {
+    top: auto;
+    bottom: 16px;
+    margin-top: 0;
+  }
+}

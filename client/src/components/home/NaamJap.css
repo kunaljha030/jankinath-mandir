@@ -1,0 +1,202 @@
+.section.naam-jap {
+  padding: 60px 0;
+  font-family: var(--font-hindi);
+}
+
+.container.naam-jap__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1140px;
+}
+
+/* Photo: framed card with the orange top border */
+.naam-jap__image {
+  padding: 14px;
+  background: #fff;
+  border-top: 3px solid var(--color-accent);
+  box-shadow: 0 20px 50px rgba(40, 40, 40, 0.1);
+}
+.naam-jap__image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* Mantra with the big “ mark on the left */
+.naam-jap__content {
+  position: relative;
+  padding-left: 80px;
+}
+.naam-jap__mark {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  font-family: var(--font-heading);
+  font-size: 7rem;
+  line-height: 1;
+  color: var(--color-accent-2);
+}
+.naam-jap__eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+.naam-jap__mantra {
+  margin: 0 0 12px;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-dark);
+}
+.naam-jap__text {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Counter + stats side by side */
+.naam-jap__row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.naam-jap__counter {
+  position: relative;
+  flex: none;
+  width: 124px;
+  height: 124px;
+}
+.naam-jap__ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+.naam-jap__ring circle {
+  fill: none;
+}
+.naam-jap__track {
+  stroke: #f6d9bb;
+  stroke-width: 6;
+  stroke-dasharray: 1.3 1.84; /* 108 beads */
+}
+.naam-jap__progress {
+  stroke: var(--color-accent);
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.naam-jap__btn {
+  position: absolute;
+  inset: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffb15c, var(--color-accent) 60%, #c94f10);
+  box-shadow: 0 8px 20px rgba(241, 111, 35, 0.35), inset 0 -5px 12px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-family: var(--font-hindi);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.naam-jap__btn.is-tap-a {
+  animation: naam-tap-a 0.25s ease;
+}
+.naam-jap__btn.is-tap-b {
+  animation: naam-tap-b 0.25s ease;
+}
+.naam-jap__btn:hover {
+  filter: brightness(1.06);
+}
+.naam-jap__btn:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+.naam-jap__ram {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.naam-jap__bead {
+  font-size: 0.72rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.naam-jap__stats p {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+.naam-jap__stats strong {
+  margin: 0 4px;
+  font-size: 1.15rem;
+  color: var(--color-accent);
+}
+.naam-jap__stats span {
+  margin: 0 6px;
+  color: var(--color-muted);
+}
+.naam-jap__stats .naam-jap__hint {
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+.naam-jap__reset {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-hindi);
+  font-size: 0.82rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.naam-jap__reset:hover {
+  color: var(--color-accent);
+}
+
+@keyframes naam-tap-a {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.93); }
+  100% { transform: scale(1); }
+}
+@keyframes naam-tap-b {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.93); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 1024px) {
+  .container.naam-jap__inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .naam-jap__image {
+    max-width: 640px;
+  }
+}
+@media (max-width: 767px) {
+  .naam-jap__content {
+    padding-left: 54px;
+  }
+  .naam-jap__mark {
+    font-size: 5rem;
+  }
+  .naam-jap__mantra {
+    font-size: 1.5rem;
+  }
+  .naam-jap__row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

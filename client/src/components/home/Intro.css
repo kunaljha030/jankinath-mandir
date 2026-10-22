@@ -1,0 +1,67 @@
+.intro {
+  padding: 100px 0;
+}
+
+.intro__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.intro__quote {
+  position: relative;
+  margin: 0;
+  padding-left: 70px;
+}
+.intro__mark {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--color-accent-2);
+}
+.intro__quote p {
+  margin-bottom: 18px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--color-dark);
+}
+.intro__quote cite {
+  font-style: normal;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.intro__cta {
+  padding: 50px;
+  background: #fff;
+  border-top: 3px solid var(--color-accent);
+}
+.intro__cta h3 {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .intro__grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .intro {
+    padding: 70px 0;
+  }
+  .intro__quote {
+    padding-left: 50px;
+  }
+  .intro__cta {
+    padding: 34px 26px;
+  }
+}

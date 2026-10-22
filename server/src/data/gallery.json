@@ -1,0 +1,14 @@
+[
+  {"id": 1, "image": "/images/temple-darbar-1.jpg", "alt": "Shri Ram Darbar", "size": "large"},
+  {"id": 2, "image": "/images/sant-samagam-1.jpg", "alt": "Sant samagam"},
+  {"id": 3, "image": "/images/thakur-ji-ke-saath.jpg", "alt": "Thakur Ji ke saath"},
+  {"id": 4, "image": "/images/temple-darbar-2.jpg", "alt": "Shri Ram Darbar shringar", "size": "large"},
+  {"id": 5, "image": "/images/sant-samagam-2.jpg", "alt": "Sant samagam"},
+  {"id": 6, "image": "/images/sant-singhasan.jpg", "alt": "Sant on the singhasan"},
+  {"id": 7, "image": "/images/sant-samagam-3.jpg", "alt": "Sant samagam"},
+  {"id": 8, "image": "/images/vimochan-karyakram.jpg", "alt": "Vimochan karyakram"},
+  {"id": 9, "image": "/images/sant-darshan-1.jpg", "alt": "Sant darshan"},
+  {"id": 10, "image": "/images/sant-samagam-4.jpg", "alt": "Sant samagam"},
+  {"id": 11, "image": "/images/sant-samagam-5.jpg", "alt": "Sant samagam"},
+  {"id": 12, "image": "/images/raghavacharya-ji.jpg", "alt": "Swami Raghavacharya Ji Maharaj"}
+]

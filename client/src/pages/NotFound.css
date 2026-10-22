@@ -1,0 +1,21 @@
+.not-found {
+  padding: calc(var(--header-height) + 160px) 0 160px;
+  background: var(--color-dark);
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.not-found h1 {
+  margin-bottom: 0;
+  font-size: 9rem;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.not-found h3 {
+  color: #fff;
+}
+
+.not-found p {
+  margin-bottom: 36px;
+}

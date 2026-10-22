@@ -1,0 +1,116 @@
+.schedule__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.schedule__subtitle {
+  display: block;
+  margin-bottom: 10px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.schedule__content h2 {
+  margin-bottom: 18px;
+  font-size: var(--fs-h1);
+}
+
+.schedule__text {
+  margin-bottom: 36px;
+}
+
+.schedule__table {
+  width: 100%;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+}
+.schedule__table tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--transition);
+}
+.schedule__table tr:first-child {
+  border-top: 1px solid var(--color-border);
+}
+.schedule__table tr:hover {
+  background: var(--color-bg-alt);
+}
+.schedule__table th,
+.schedule__table td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+.schedule__table th {
+  width: 100px;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+.schedule__table td {
+  color: var(--color-dark);
+}
+
+/* Photo keeps its own shape (no cropping) and stays in view while scrolling the table */
+.schedule__media {
+  position: sticky;
+  top: calc(var(--header-height) + 40px);
+  align-self: center;
+}
+
+.schedule__image {
+  position: relative;
+  padding: 0 0 30px 30px;
+}
+.schedule__image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 20px 50px rgba(40, 40, 40, 0.15);
+}
+.schedule__frame {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 0;
+  left: 0;
+  border: 2px solid var(--color-accent-2);
+}
+
+@media (max-width: 1024px) {
+  .schedule__grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .schedule__media {
+    position: static;
+    order: -1;
+    max-width: 640px;
+  }
+}
+@media (max-width: 520px) {
+  .schedule__table th {
+    width: 70px;
+    padding-left: 8px;
+  }
+  .schedule__table td {
+    padding-right: 8px;
+  }
+}
+
+/* Hindi text: no extra letter-spacing so the shirorekha stays joined */
+.schedule__subtitle {
+  letter-spacing: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.schedule__table td {
+  font-family: var(--font-hindi);
+}

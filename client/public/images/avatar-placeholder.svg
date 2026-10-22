@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 320">
+  <!-- Neutral placeholder until a real photo is added -->
+  <rect width="270" height="320" fill="#f2f1ef"/>
+  <circle cx="135" cy="122" r="50" fill="#e7e4df"/>
+  <path d="M45 320c0-62 40-104 90-104s90 42 90 104z" fill="#e7e4df"/>
+  <path d="M135 92c4 7 6 13 6 19s-2 11-6 16c-4-5-6-10-6-16s2-12 6-19zM115 110c6 1 11 4 14 9 2 3 3 6 3 9-6-1-10-3-13-8-3-3-4-7-4-10zm40 0c0 3-1 7-4 10-3 5-7 7-13 8 0-3 1-6 3-9 3-5 8-8 14-9z" fill="#ffac4b" opacity=".8"/>
+</svg>

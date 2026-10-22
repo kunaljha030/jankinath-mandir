@@ -1,0 +1,102 @@
+.features {
+  padding: 30px 0 var(--section-space);
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gutter);
+}
+
+.feature-card {
+  display: block;
+  text-align: center;
+}
+.feature-card:hover {
+  color: inherit;
+}
+
+.feature-card__image {
+  position: relative;
+  aspect-ratio: 570 / 550;
+  overflow: hidden;
+}
+.feature-card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.feature-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+.feature-card:hover .feature-card__image img {
+  transform: scale(1.08);
+}
+.feature-card:hover .feature-card__image::after {
+  opacity: 0.25;
+}
+
+.feature-card__body {
+  position: relative;
+  margin: -40px 20px 0;
+  padding: 26px 20px 22px;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(40, 40, 40, 0.08);
+  transition: transform var(--transition);
+}
+.feature-card:hover .feature-card__body {
+  transform: translateY(-6px);
+}
+.feature-card__body h4 {
+  margin-bottom: 8px;
+  transition: color var(--transition);
+}
+.feature-card:hover h4 {
+  color: var(--color-accent);
+}
+
+@media (max-width: 1024px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+}
+@media (max-width: 520px) {
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hindi card titles */
+.feature-card__body h4 {
+  font-family: var(--font-hindi);
+  font-weight: 400;
+  line-height: 1.4;
+}
+.feature-card__body .link-more {
+  letter-spacing: 0; /* keeps the Hindi shirorekha joined */
+  font-size: 0.9rem;
+}
+
+/* Equal-height cards: every white box is the same size, text centred inside */
+.features__grid > * {
+  display: flex;
+}
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.feature-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

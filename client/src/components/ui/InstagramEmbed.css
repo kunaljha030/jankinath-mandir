@@ -1,0 +1,10 @@
+.instagram-embed {
+  display: flex;
+  justify-content: center;
+}
+.instagram-embed .instagram-media {
+  width: 100%;
+  max-width: 540px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}

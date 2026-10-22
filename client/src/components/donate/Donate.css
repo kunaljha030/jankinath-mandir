@@ -1,0 +1,125 @@
+/* ---------- Causes grid (2 columns, like the GiveWP grid) ---------- */
+.causes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.cause-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.cause-card__link:hover {
+  color: inherit;
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(40, 40, 40, 0.1);
+}
+
+.cause-card__image {
+  overflow: hidden;
+}
+.cause-card__image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+.cause-card__link:hover .cause-card__image img {
+  transform: scale(1.05);
+}
+
+.cause-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 34px 40px 40px;
+}
+.cause-card__title {
+  margin-bottom: 12px;
+  font-size: var(--fs-h4);
+  transition: color var(--transition);
+}
+.cause-card__link:hover .cause-card__title {
+  color: var(--color-accent);
+}
+.cause-card__text {
+  margin-bottom: 18px;
+}
+.cause-card__donate {
+  align-self: flex-start;
+  margin-bottom: 28px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: var(--color-accent);
+}
+.cause-card__body .donation-progress {
+  margin-top: auto;
+}
+
+/* ---------- Progress ---------- */
+.donation-progress__bar {
+  height: 8px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  background: var(--color-bg-alt);
+  overflow: hidden;
+}
+.donation-progress__bar span {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--color-accent-2), var(--color-accent));
+  transition: width 1.2s ease;
+}
+.donation-progress__stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.85rem;
+}
+.donation-progress__stats > div {
+  display: flex;
+  flex-direction: column;
+}
+.donation-progress__stats strong {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-dark);
+}
+.donation-progress__count {
+  text-align: right;
+}
+
+@media (max-width: 860px) {
+  .causes-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .cause-card__body {
+    padding: 28px 24px 32px;
+  }
+}
+
+/* Hindi cause cards */
+.cause-card__title {
+  font-family: var(--font-hindi);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.cause-card__text {
+  line-height: 1.8;
+}
+.cause-card__donate {
+  letter-spacing: 0; /* keeps the Hindi shirorekha joined */
+  font-size: 0.95rem;
+}

@@ -1,0 +1,113 @@
+.video-box {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #000;
+}
+
+.video-box video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Big white ring play button in the middle */
+.video-box__big-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  padding: 0 0 0 4px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+.video-box__big-play:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+/* Orange translucent control bar */
+.video-box__bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 10px;
+  background: rgba(255, 172, 75, 0.85);
+  color: #fff;
+  transition: background-color var(--transition), opacity var(--transition);
+}
+.video-box.is-playing .video-box__bar {
+  background: rgba(241, 111, 35, 0.9);
+  opacity: 0;
+}
+.video-box.is-playing:hover .video-box__bar,
+.video-box.is-playing:focus-within .video-box__bar {
+  opacity: 1;
+}
+
+.video-box__bar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.video-box__bar button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.video-box__time {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.video-box__progress {
+  flex: 1;
+  min-width: 0;
+  height: 4px;
+  margin: 0 4px;
+  border-radius: 2px;
+  background: linear-gradient(to right, #fff var(--progress, 0%), rgba(255, 255, 255, 0.35) var(--progress, 0%));
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.video-box__progress::-webkit-slider-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-appearance: none;
+}
+.video-box__progress::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+}

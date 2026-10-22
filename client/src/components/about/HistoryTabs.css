@@ -1,0 +1,119 @@
+.history__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.history__image {
+  position: relative;
+  padding: 0 30px 30px 0;
+}
+.history__image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+/* Offset orange frame behind the photo */
+.history__frame {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--color-accent-2);
+}
+
+.history__body h2 {
+  margin-bottom: 34px;
+  font-size: var(--fs-h1);
+}
+
+.history__intro {
+  margin: -14px 0 34px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-dark);
+}
+
+.history__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.history__tab {
+  position: relative;
+  padding: 12px 26px 16px;
+  background: none;
+  border: 0;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color var(--transition);
+}
+.history__tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+.history__tab:hover {
+  color: var(--color-dark);
+}
+.history__tab.is-active {
+  color: var(--color-accent);
+}
+.history__tab.is-active::after {
+  transform: scaleX(1);
+}
+
+.history__panel {
+  position: relative;
+  isolation: isolate;
+  padding-top: 36px;
+  animation: historyIn 0.5s ease both;
+}
+.history__year {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--color-bg-alt);
+  z-index: -1;
+  user-select: none;
+}
+.history__panel h4 {
+  margin-bottom: 14px;
+}
+
+@keyframes historyIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 1024px) {
+  .history__grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+@media (max-width: 520px) {
+  .history__tab {
+    padding: 10px 14px 14px;
+    font-size: 1.15rem;
+  }
+  .history__year {
+    font-size: 4rem;
+  }
+}

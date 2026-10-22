@@ -1,0 +1,45 @@
+.teaching-videos .section-title__title {
+  font-family: var(--font-hindi);
+  color: #c0392b;
+}
+
+.teaching-videos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
+.teaching-videos__item iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #000;
+  border: 0;
+}
+
+@media (max-width: 1024px) {
+  .teaching-videos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .teaching-videos__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.teaching-videos__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  aspect-ratio: 4 / 3;
+  background: var(--color-bg-alt);
+  border: 1px dashed var(--color-border);
+  font-family: var(--font-hindi);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}

@@ -1,0 +1,80 @@
+{
+  "pageTitle": {
+    "title": "धार्मिक शिक्षा एवं दीक्षा",
+    "image": "/images/teaching-banner.png",
+    "imagePosition": "center"
+  },
+  "welcome": {
+    "eyebrow": "* शिक्षा मंत्रालय, भारत सरकार के स्वामित्व, महर्षि सांदीपनि राष्ट्रीय वेदविद्या प्रतिष्ठान, उज्जैन द्वारा अनुदानित *",
+    "title": "श्री जानकीनाथ वेद विद्यालय रैवासाधाम सीकर",
+    "subtitle": "* श्री जानकीनाथ बड़ा मन्दिर ट्रस्ट, रैवासाधाम द्वारा संचालित *",
+    "motto": "!! भारत की दो ही प्रतिष्ठा हैं, संस्कृत भाषा और भारतीय संस्कृति !!",
+    "quote": "भारतस्य प्रतिष्ठे द्वे संस्कृतं संस्कृतिस्तथा",
+    "image": "/images/teaching-students.jpg",
+    "videoUrl": "https://www.youtube.com/embed/inpok4MKVLM"
+  },
+  "topics": [
+    {
+      "title": "संध्यावन्दनम्",
+      "icon": "diya"
+    },
+    {
+      "title": "योग साधना",
+      "icon": "meditation"
+    },
+    {
+      "title": "वेदाध्ययन एवं कर्मकांड",
+      "icon": "book"
+    },
+    {
+      "title": "पौराणिक और आधुनिक शिक्षा",
+      "icon": "scroll"
+    },
+    {
+      "title": "स्वावलम्बन",
+      "icon": "people"
+    },
+    {
+      "title": "गौ संरक्षण",
+      "icon": "heart"
+    },
+    {
+      "title": "संगीत शास्त्र",
+      "icon": "bell"
+    },
+    {
+      "title": "ज्योतिष शास्त्र",
+      "icon": "lotus"
+    }
+  ],
+  "videos": {
+    "title": "धार्मिक शिक्षा",
+    "items": [
+      {
+        "src": "/videos/reels/janmashtami-mahotsav.mp4",
+        "poster": ""
+      },
+      {
+        "src": "/videos/reels/siyapiya-milan-mahotsav.mp4",
+        "poster": ""
+      },
+      {
+        "src": "/videos/reels/janmashtami-mahotsav.mp4",
+        "poster": ""
+      },
+      {
+        "src": "/videos/reels/siyapiya-milan-mahotsav.mp4",
+        "poster": ""
+      },
+      {
+        "src": "/videos/reels/janmashtami-mahotsav.mp4",
+        "poster": ""
+      },
+      {
+        "src": "/videos/reels/siyapiya-milan-mahotsav.mp4",
+        "poster": ""
+      }
+    ]
+  },
+  "photosTitle": "Latest Photos"
+}

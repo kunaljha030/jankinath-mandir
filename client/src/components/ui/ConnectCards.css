@@ -1,0 +1,285 @@
+/* Wider than the usual container so the four cards get more room */
+.container.connect-section__container {
+  max-width: 1600px;
+}
+
+/* Four equal-height columns; two on laptops/tablets; stacked on phones */
+.connect-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+@media (max-width: 1200px) {
+  .connect-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .connect-cards {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
+.connect-card {
+  --brand: var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--brand);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.connect-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+.connect-card--youtube {
+  --brand: #e62117;
+}
+.connect-card--instagram {
+  --brand: #d62976;
+}
+.connect-card--whatsapp {
+  --brand: #25d366;
+}
+.connect-card--katha {
+  --brand: var(--color-accent);
+}
+
+/* Profile header: avatar + name/handle on one row, full-width button below
+   (keeps all four headers identical, however narrow the column gets) */
+.connect-card__header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 14px 12px;
+  padding: 18px 18px 16px;
+  border-bottom: 1px solid var(--color-border);
+  color: inherit;
+  text-decoration: none;
+}
+a.connect-card__header:hover .connect-card__cta {
+  filter: brightness(1.1);
+}
+
+.connect-card__avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+.connect-card__avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--brand);
+  background: var(--color-bg-alt);
+}
+.connect-card__badge {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--color-bg);
+  background: var(--brand);
+  color: #fff;
+}
+
+.connect-card__who {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.connect-card__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-dark);
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+.connect-card__handle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--fs-small);
+}
+
+.connect-card__cta {
+  grid-column: 1 / -1;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-align: center;
+}
+.connect-card__header--disabled .connect-card__cta,
+.connect-card__disabled-btn {
+  opacity: 0.5;
+}
+
+.connect-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+.connect-card__body > * {
+  flex: 1;
+}
+
+/* YouTube: latest videos; they grow to fill the card so it ends level with the others */
+.connect-card__videos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.connect-card__video {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #000;
+}
+.connect-card__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.connect-card__video--loading {
+  background: linear-gradient(90deg, var(--color-bg-alt) 25%, var(--color-border) 50%, var(--color-bg-alt) 75%);
+  background-size: 200% 100%;
+  animation: connect-shimmer 1.4s infinite linear;
+}
+@keyframes connect-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* Icon + text + button, centred (WhatsApp, and YouTube when unreachable) */
+.connect-card__fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px 6px;
+  text-align: center;
+}
+.connect-card__fallback p {
+  margin: 0;
+}
+.connect-card__fallback-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+}
+
+/* आगामी कथाएँ: date-wise programme list. It takes the height the other cards set
+   (doesn't stretch the row) and scrolls inside the card. */
+.connect-card--katha .connect-card__body {
+  position: relative;
+  min-height: 360px;
+  padding: 0;
+}
+.connect-card__kathas {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 4px 18px;
+  overflow-y: auto;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent-pale) transparent;
+}
+.connect-card__katha {
+  display: flex;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+.connect-card__katha:last-child {
+  border-bottom: 0;
+}
+.connect-card__katha-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
+  height: 54px;
+  border-radius: 6px;
+  background: var(--brand);
+  color: #fff;
+  line-height: 1.1;
+}
+.connect-card__katha-day {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+}
+.connect-card__katha-month {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.connect-card__katha-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+}
+.connect-card__katha-title {
+  color: var(--color-dark);
+  font-weight: 600;
+  line-height: 1.35;
+}
+.connect-card__katha-title:hover {
+  color: var(--brand);
+}
+.connect-card__katha-meta {
+  color: var(--brand);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+.connect-card__katha-place {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: var(--fs-small);
+  line-height: 1.4;
+}
+.connect-card__katha-place svg {
+  flex-shrink: 0;
+  position: relative;
+  top: 1px;
+}
+.connect-card__katha-empty {
+  margin: 0;
+  padding: 30px 18px;
+  text-align: center;
+}

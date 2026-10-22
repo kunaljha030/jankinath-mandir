@@ -1,0 +1,571 @@
+.section.darshan-info {
+  padding: 80px 0 90px;
+  background: linear-gradient(180deg, #fff7ee 0%, #fff 100%);
+}
+.container.darshan-info__container {
+  max-width: 1240px;
+}
+.darshan-info .section-title {
+  margin-bottom: 44px;
+}
+.darshan-info .section-title__title {
+  font-family: var(--font-hindi);
+  font-weight: 700;
+}
+.darshan-info .section-title__subtitle {
+  letter-spacing: 0; /* keeps the Hindi shirorekha joined */
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.darshan-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 34px 30px 32px;
+  border-top: 4px solid var(--color-accent);
+  border-radius: 14px;
+  background: var(--color-bg);
+  box-shadow: 0 16px 40px rgba(40, 40, 40, 0.08);
+  font-family: var(--font-hindi);
+}
+
+.darshan-card__icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #fff1e4;
+  color: var(--color-accent);
+}
+
+.darshan-card__title {
+  margin: 0 0 18px;
+  font-family: var(--font-hindi);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-dark);
+}
+
+/* Live open / closed badge */
+.darshan-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.darshan-status i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.darshan-status--open {
+  background: #e7f6ea;
+  color: #1f8a3b;
+}
+.darshan-status--open i {
+  animation: darshan-blink 1.6s ease-in-out infinite;
+}
+.darshan-status--closed {
+  background: #fdecea;
+  color: #c0392b;
+}
+
+.darshan-card__rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.darshan-card__rows li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--color-border);
+  color: #555;
+}
+.darshan-card__rows li:last-child {
+  border-bottom: 0;
+}
+.darshan-card__rows strong {
+  font-weight: 600;
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+.darshan-card__rows li.is-active strong,
+.darshan-card__rows li.is-next strong,
+.darshan-card__rows li.is-next span {
+  color: var(--color-accent);
+}
+.darshan-card__rows li.is-next {
+  margin: 0 -12px;
+  padding: 12px 12px 22px;
+  border-radius: 8px;
+  border-bottom-color: transparent;
+  background: #fff4e9;
+}
+.darshan-card__rows li em {
+  position: absolute;
+  left: 12px;
+  bottom: 3px;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.darshan-card__note {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.darshan-card__address {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+  font-style: normal;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--color-dark);
+}
+
+.darshan-card__points {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+.darshan-card__points li {
+  position: relative;
+  padding: 6px 0 6px 20px;
+  line-height: 1.7;
+  color: #555;
+}
+.darshan-card__points li::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.darshan-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+}
+.darshan-card__actions .btn {
+  letter-spacing: 0;
+  font-size: 0.92rem;
+}
+
+@keyframes darshan-blink {
+  50% { opacity: 0.3; }
+}
+
+@media (max-width: 767px) {
+  .section.darshan-info {
+    padding: 60px 0 70px;
+  }
+}
+
+/* Hindu panchang card */
+.panchang__day {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-bottom: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: #fff4e9;
+}
+.panchang__date {
+  font-size: 0.8rem;
+  color: var(--color-text);
+}
+.panchang__tithi {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-accent);
+}
+.panchang__meta {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #555;
+}
+.panchang__vrat {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.panchang__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+.panchang__nav button {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color-dark);
+  cursor: pointer;
+}
+.panchang__nav button:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.panchang__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.panchang__wd {
+  padding: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-muted);
+}
+.panchang__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1px 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-family: var(--font-hindi);
+  line-height: 1.15;
+  cursor: pointer;
+}
+.panchang__cell span {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+.panchang__cell small {
+  font-size: 0.6rem;
+  color: #666;
+}
+.panchang__cell.is-shukla {
+  background: #fffaf3;
+}
+.panchang__cell.is-krishna {
+  background: #f3f1ee;
+}
+.panchang__cell.is-ekadashi small,
+.panchang__cell.is-special small {
+  font-weight: 700;
+  color: var(--color-accent);
+}
+.panchang__cell.is-ekadashi {
+  background: #ffe6cf;
+}
+.panchang__cell.is-today {
+  border-color: var(--color-accent);
+}
+.panchang__cell.is-picked {
+  background: var(--color-accent);
+}
+.panchang__cell.is-picked span,
+.panchang__cell.is-picked small {
+  color: #fff;
+}
+
+.panchang__legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 0;
+  font-size: 0.74rem;
+  color: var(--color-text);
+}
+.panchang__legend em {
+  margin-left: auto;
+  font-style: normal;
+  cursor: help;
+}
+.panchang__legend i {
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+}
+.panchang__legend i:first-child {
+  margin-left: 0;
+}
+.panchang__legend i.is-shukla {
+  background: #fffaf3;
+}
+.panchang__legend i.is-krishna {
+  background: #f3f1ee;
+}
+.panchang__legend i.is-ekadashi {
+  background: #ffe6cf;
+}
+
+/* Ekadashi + mahotsav lists */
+.fest-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fest-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+.fest-list li:last-child {
+  border-bottom: 0;
+}
+.fest-list li.is-next {
+  margin: 0 -12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-bottom-color: transparent;
+  background: #fff4e9;
+}
+.fest-list__day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 52px;
+  padding: 5px 0;
+  border-radius: 8px;
+  background: #fff1e4;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  color: var(--color-accent);
+}
+.fest-list li.is-next .fest-list__day {
+  background: var(--color-accent);
+  color: #fff;
+}
+.fest-list__day strong {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.fest-list__day .fest-list__month {
+  padding: 4px 0;
+  font-size: 0.78rem;
+}
+.fest-list__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.fest-list__body strong {
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-dark);
+}
+.fest-list__body small {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+.fest-list__left {
+  flex: none;
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--color-accent);
+}
+
+/* Slider: 3 cards visible, 2 on tablets, 1 on phones (arrows from TeamSlider.css) */
+.darshan-info__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * 28px) / 3);
+  gap: 28px;
+  padding: 8px 4px 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.darshan-info__track::-webkit-scrollbar {
+  display: none;
+}
+.darshan-info__track > .darshan-card {
+  scroll-snap-align: start;
+}
+.darshan-info .team__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 1024px) {
+  .darshan-info__track {
+    grid-auto-columns: calc((100% - 28px) / 2);
+  }
+}
+@media (max-width: 767px) {
+  .darshan-info__track {
+    grid-auto-columns: 88%;
+  }
+}
+
+/* Compact cards: smaller icon, title and list rows */
+.darshan-card {
+  padding: 24px 24px 22px;
+}
+.darshan-card__icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+}
+.darshan-card__icon svg {
+  width: 18px;
+  height: 18px;
+}
+.darshan-card__title {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+.darshan-status {
+  margin-bottom: 10px;
+  padding: 4px 12px;
+  font-size: 0.82rem;
+}
+.darshan-card__rows li {
+  padding: 8px 0;
+  font-size: 0.92rem;
+}
+.darshan-card__rows li.is-next {
+  padding: 8px 12px 18px;
+}
+.fest-list li {
+  gap: 12px;
+  padding: 7px 0;
+}
+.fest-list li.is-next {
+  padding: 7px 12px;
+}
+.fest-list__day {
+  flex-basis: 46px;
+  padding: 3px 0;
+  font-size: 0.68rem;
+}
+.fest-list__day strong {
+  font-size: 1rem;
+}
+.fest-list__body strong {
+  font-size: 0.92rem;
+}
+.fest-list__body small {
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+.fest-list__left {
+  font-size: 0.74rem;
+}
+.panchang__cell {
+  padding: 0;
+}
+.section.darshan-info {
+  padding: 60px 0 60px;
+}
+.darshan-info .section-title {
+  margin-bottom: 30px;
+}
+
+/* Tighter heading area */
+.section.darshan-info {
+  padding-top: 36px;
+}
+.darshan-info .section-title {
+  margin-bottom: 18px;
+}
+.darshan-info .section-title__subtitle {
+  margin-bottom: 4px;
+}
+.darshan-info .section-title__title {
+  font-size: 2.2rem;
+}
+.darshan-info .section-title__divider {
+  margin-top: 6px;
+}
+
+/* Arrows sit in their own space beside the cards, not over them */
+.darshan-info__slider {
+  padding: 0 70px;
+}
+.darshan-info .team__arrow--prev {
+  left: 0;
+}
+.darshan-info .team__arrow--next {
+  right: 0;
+}
+.container.darshan-info__container {
+  max-width: 1340px;
+}
+@media (max-width: 767px) {
+  .darshan-info__slider {
+    padding: 0;
+  }
+  .darshan-info .team__arrow--prev {
+    left: -10px;
+  }
+  .darshan-info .team__arrow--next {
+    right: -10px;
+  }
+}
+
+.section.darshan-info {
+  padding-bottom: 24px;
+}
+
+/* Phones: arrows go under the cards instead of over them */
+@media (max-width: 767px) {
+  .darshan-info__slider {
+    padding-bottom: 66px;
+  }
+  .darshan-info .team__arrow {
+    top: auto;
+    bottom: 0;
+    transform: none;
+  }
+  .darshan-info .team__arrow--prev {
+    left: calc(50% - 62px);
+  }
+  .darshan-info .team__arrow--next {
+    right: calc(50% - 62px);
+  }
+}
