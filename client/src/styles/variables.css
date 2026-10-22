@@ -42,7 +42,7 @@
 
   --transition: 0.3s ease;
 
-  /* Whole-page scale (html zoom). Laptops and normal desktops show the site at 80%,
+  /* Whole-page scale (html zoom). Laptops and normal desktops show the site at 75%,
      the size it was designed at; big screens and tablets/phones at 100%.
      Screen-height sizes divide by it: calc(100vh / var(--zoom)). */
   --zoom: 1;
@@ -50,7 +50,7 @@
 
 @media (min-width: 1025px) and (max-width: 1919px) {
   :root {
-    --zoom: 0.8;
+    --zoom: 0.75;
   }
 }
 

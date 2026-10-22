@@ -60,3 +60,25 @@
     padding-bottom: 60px;
   }
 }
+
+/* Smaller banner on every page */
+.page-title {
+  min-height: 340px;
+  padding: calc(var(--header-height) + 40px) 0 50px;
+}
+.page-title h1 {
+  margin-bottom: 10px;
+  font-size: 3.2rem;
+}
+.breadcrumbs {
+  font-size: 0.85rem;
+}
+@media (max-width: 767px) {
+  .page-title {
+    min-height: 260px;
+    padding-bottom: 40px;
+  }
+  .page-title h1 {
+    font-size: 2.2rem;
+  }
+}
